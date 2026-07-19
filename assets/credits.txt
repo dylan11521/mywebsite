@@ -1,6 +1,6 @@
-Prototype image credits
+Placeholder image credits
 
-Both images were downloaded from Unsplash for phase-one visual prototyping.
+These three images were downloaded from Unsplash for the website build.
 Unsplash license: https://unsplash.com/license
 
 Hero image source:
@@ -12,4 +12,4 @@ https://images.unsplash.com/photo-1575548393466-0df1618ba410
 Fishing image source:
 https://images.unsplash.com/photo-1632862316541-0b75b0126544
 
-Replace these licensed placeholders with Dylan's approved personal media before final implementation.
+Replace these licensed placeholders with Dylan's approved personal media before publication.

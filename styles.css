@@ -1,3 +1,4 @@
+/* Shared layout and accessible interaction styles. */
 :root {
   color-scheme: dark;
   --bg: #0d0f12;
@@ -46,6 +47,10 @@
 
 * {
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 html {
@@ -420,7 +425,7 @@ main {
   text-transform: uppercase;
 }
 
-.prototype-note {
+.hero-kicker {
   width: fit-content;
   margin: 0 0 22px;
   font: 700 0.68rem/1 var(--display-font);

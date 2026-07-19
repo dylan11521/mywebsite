@@ -1,3 +1,5 @@
+"use strict";
+
 document.documentElement.classList.add("js");
 
 const savedTheme = localStorage.getItem("dylan-theme");

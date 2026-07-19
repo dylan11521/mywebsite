@@ -1,3 +1,5 @@
+"use strict";
+
 const menuButton = document.querySelector(".menu-button");
 const mobileMenu = document.querySelector(".mobile-menu");
 const navLinks = [...document.querySelectorAll("[data-nav]")];
