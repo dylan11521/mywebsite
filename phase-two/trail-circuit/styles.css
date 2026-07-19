@@ -1,0 +1,220 @@
+:root {
+  --bg: #151712;
+  --surface: #1d2019;
+  --surface-2: #292d23;
+  --text: #efecdf;
+  --muted: #aaa99b;
+  --line: #4b4d42;
+  --accent: #f04b32;
+  --focus: #ff765f;
+}
+
+:root[data-theme="light"] {
+  --bg: #e8e2d4;
+  --surface: #f7f2e7;
+  --surface-2: #d9d2c2;
+  --text: #1c211a;
+  --muted: #586055;
+  --line: #aaa999;
+  --accent: #c93420;
+  --focus: #862214;
+}
+
+body {
+  background:
+    repeating-radial-gradient(ellipse at 95% 8%, transparent 0 36px, color-mix(in srgb, var(--line) 24%, transparent) 37px 38px),
+    var(--bg);
+}
+
+.desktop-rail {
+  border-color: var(--line);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, #fff 3%, transparent), transparent),
+    var(--surface);
+}
+
+.desktop-rail::before,
+.desktop-rail::after {
+  position: absolute;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface-2);
+  content: "";
+}
+
+.desktop-rail::before {
+  top: 8px;
+}
+
+.desktop-rail::after {
+  bottom: 8px;
+}
+
+.desktop-rail .brand {
+  margin: 22px auto;
+  width: 50px;
+  min-height: 50px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 6px var(--surface-2);
+}
+
+.desktop-rail nav a::after {
+  right: -6px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.desktop-rail nav a.is-active::after {
+  height: 11px;
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 66%, transparent);
+}
+
+.hero-photo {
+  filter: sepia(0.18) saturate(0.62) contrast(1.15) brightness(0.72);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(15, 17, 13, 0.96), rgba(15, 17, 13, 0.52) 56%, transparent 82%),
+    linear-gradient(0deg, rgba(15, 17, 13, 0.75), transparent 48%);
+}
+
+.hero-decoration {
+  background:
+    repeating-radial-gradient(ellipse at 84% 28%, transparent 0 28px, rgba(239, 236, 223, 0.15) 29px 30px),
+    linear-gradient(90deg, transparent 0 73%, rgba(240, 75, 50, 0.45) 73% 73.15%, transparent 73.15%);
+}
+
+.hero-decoration::before {
+  position: absolute;
+  right: 7%;
+  bottom: 8%;
+  width: clamp(160px, 23vw, 330px);
+  aspect-ratio: 1;
+  border: 1px dashed rgba(239, 236, 223, 0.42);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 18px rgba(21, 23, 18, 0.2), inset 0 0 0 19px rgba(239, 236, 223, 0.18);
+  content: "";
+}
+
+.prototype-note {
+  border: 1px solid rgba(239, 236, 223, 0.42);
+  padding: 9px 12px;
+  background: rgba(21, 23, 18, 0.66);
+}
+
+.hero .accent-line {
+  color: var(--accent);
+  text-shadow: 4px 4px 0 rgba(16, 18, 14, 0.6);
+}
+
+.hero-scroll {
+  border: 1px solid rgba(239, 236, 223, 0.5);
+  padding: 11px 14px;
+  background: rgba(21, 23, 18, 0.64);
+}
+
+.about-section,
+.riding-section {
+  background:
+    repeating-radial-gradient(ellipse at 100% 8%, transparent 0 34px, color-mix(in srgb, var(--line) 24%, transparent) 35px 36px),
+    var(--bg);
+}
+
+.trait-card,
+.hobby-card,
+.ride-card,
+.media-frame {
+  box-shadow: 7px 7px 0 color-mix(in srgb, #000 35%, transparent);
+}
+
+.trait-card::before,
+.ride-card::before {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--line);
+  content: "";
+}
+
+.section-index {
+  color: var(--accent);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+}
+
+.hobby-card[open] summary {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.game-grid span {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 12px, color-mix(in srgb, var(--line) 22%, transparent) 12px 13px),
+    var(--surface-2);
+}
+
+.court-graphic {
+  background:
+    repeating-radial-gradient(circle at center, transparent 0 42px, color-mix(in srgb, var(--line) 55%, transparent) 43px 44px),
+    var(--surface);
+  box-shadow: 10px 10px 0 color-mix(in srgb, #000 30%, transparent);
+}
+
+.court-graphic span {
+  text-shadow: 5px 5px 0 color-mix(in srgb, #000 28%, transparent);
+}
+
+.quote-card {
+  border-style: dashed;
+}
+
+.media-frame {
+  border-width: 9px;
+  border-color: var(--surface-2);
+  outline: 1px solid var(--line);
+}
+
+.media-frame > img {
+  filter: sepia(0.15) saturate(0.82) contrast(1.14);
+}
+
+.ride-card {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--line) 18%, transparent) 14px 15px),
+    var(--surface);
+}
+
+.ride-card > span {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.mobile-menu {
+  background:
+    repeating-radial-gradient(ellipse at 100% 8%, transparent 0 27px, color-mix(in srgb, var(--accent) 12%, transparent) 28px 29px),
+    var(--bg);
+}
+
+@media (max-width: 760px) {
+  .hero-decoration::before {
+    right: -18%;
+  }
+
+  .trait-card,
+  .hobby-card,
+  .ride-card,
+  .media-frame {
+    box-shadow: 4px 4px 0 color-mix(in srgb, #000 30%, transparent);
+  }
+}

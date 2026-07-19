@@ -1,0 +1,264 @@
+:root {
+  --bg: #101216;
+  --surface: #191c22;
+  --surface-2: #252932;
+  --text: #f8f5ee;
+  --muted: #adb0b7;
+  --line: #373b44;
+  --accent: #f01843;
+  --focus: #fff;
+}
+
+:root[data-theme="light"] {
+  --bg: #f3f0e9;
+  --surface: #fff;
+  --surface-2: #e8e3da;
+  --text: #14161b;
+  --muted: #565b64;
+  --line: #c8c2b8;
+  --accent: #ce1136;
+  --focus: #8e0926;
+}
+
+.desktop-rail {
+  border-color: color-mix(in srgb, #fff 26%, transparent);
+  background: var(--accent);
+}
+
+.desktop-rail .brand {
+  border-color: color-mix(in srgb, #fff 26%, transparent);
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.desktop-rail nav a {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.desktop-rail nav a:hover,
+.desktop-rail nav a.is-active {
+  background: #fff;
+  color: #15171c;
+}
+
+.desktop-rail nav a::after {
+  right: -11px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 11px solid #fff;
+  background: transparent;
+  opacity: 0;
+}
+
+.desktop-rail nav a.is-active::after {
+  height: 0;
+  opacity: 1;
+}
+
+.desktop-rail .nav-index {
+  color: inherit;
+  opacity: 0.72;
+}
+
+.rail-actions {
+  border-color: color-mix(in srgb, #fff 26%, transparent);
+}
+
+.rail-actions .theme-button {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.rail-actions .theme-button::before {
+  background: #fff;
+  box-shadow: none;
+}
+
+.rail-actions .compare-link {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-photo {
+  filter: saturate(0.72) contrast(1.15) brightness(0.76);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(102deg, rgba(10, 12, 16, 0.96) 0%, rgba(10, 12, 16, 0.6) 48%, transparent 72%),
+    linear-gradient(0deg, rgba(7, 8, 11, 0.7), transparent 45%);
+}
+
+.hero-decoration {
+  overflow: hidden;
+}
+
+.hero-decoration::before {
+  position: absolute;
+  top: -18%;
+  right: -10%;
+  width: 44%;
+  height: 145%;
+  background: rgba(240, 24, 67, 0.82);
+  content: "";
+  transform: skewX(-13deg);
+  mix-blend-mode: multiply;
+}
+
+.hero-decoration::after {
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
+  width: 25%;
+  height: 7px;
+  background: repeating-linear-gradient(90deg, #fff 0 17%, transparent 17% 22%);
+  content: "";
+  transform: skewX(-16deg);
+}
+
+.prototype-note {
+  padding: 8px 12px;
+  background: var(--accent);
+  transform: skewX(-8deg);
+}
+
+.hero h1 {
+  max-width: 920px;
+  transform: skewX(-3deg);
+}
+
+.hero .accent-line {
+  color: var(--accent);
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.32);
+}
+
+.hero-scroll {
+  padding: 12px 17px;
+  background: #fff;
+  color: #121318;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.about-section {
+  background:
+    linear-gradient(115deg, transparent 0 76%, color-mix(in srgb, var(--accent) 8%, transparent) 76% 86%, transparent 86%),
+    var(--bg);
+}
+
+.trait-card,
+.hobby-card,
+.ride-card {
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+.trait-card::after,
+.ride-card::after {
+  position: absolute;
+  right: -55px;
+  bottom: -90px;
+  width: 145px;
+  height: 210px;
+  background: var(--accent);
+  content: "";
+  opacity: 0.09;
+  transform: rotate(18deg);
+}
+
+.trait-card:first-child {
+  border-left: 6px solid var(--accent);
+}
+
+.hobbies-section .section-index,
+.riding-section .section-index {
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--text) 22%, transparent);
+}
+
+.hobby-card summary:hover {
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+.game-grid span:nth-child(odd) {
+  border-color: var(--accent);
+}
+
+.court-graphic {
+  border: 0;
+  background:
+    linear-gradient(145deg, transparent 0 45%, color-mix(in srgb, var(--accent) 92%, transparent) 45% 100%),
+    var(--surface);
+  clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%);
+}
+
+.court-graphic::before,
+.court-graphic::after {
+  border-color: rgba(255, 255, 255, 0.48);
+}
+
+.court-graphic span {
+  color: #fff;
+  filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.26));
+}
+
+.quote-card {
+  position: relative;
+  padding-left: 18px;
+}
+
+.quote-card::before {
+  position: absolute;
+  inset: 25px auto 25px 0;
+  width: 4px;
+  background: var(--accent);
+  content: "";
+}
+
+.media-frame {
+  border: 0;
+  clip-path: polygon(0 0, 97% 0, 100% 7%, 100% 100%, 3% 100%, 0 93%);
+  box-shadow: 14px 14px 0 color-mix(in srgb, var(--accent) 58%, transparent);
+}
+
+.media-frame > img {
+  filter: saturate(0.82) contrast(1.14);
+}
+
+.ride-card {
+  border-top: 5px solid var(--accent);
+}
+
+.site-footer {
+  background: var(--accent);
+  color: #fff;
+}
+
+.site-footer .footer-meta {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.site-footer .theme-button {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.mobile-bar {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--accent);
+  color: #fff;
+}
+
+.mobile-brand {
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .hero-decoration::before {
+    right: -40%;
+    width: 78%;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 19vw, 6.5rem);
+  }
+}

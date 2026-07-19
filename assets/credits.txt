@@ -9,4 +9,7 @@ https://images.unsplash.com/photo-1534146789009-76ed5060ec70
 Riding image source:
 https://images.unsplash.com/photo-1575548393466-0df1618ba410
 
+Fishing image source:
+https://images.unsplash.com/photo-1632862316541-0b75b0126544
+
 Replace these licensed placeholders with Dylan's approved personal media before final implementation.
