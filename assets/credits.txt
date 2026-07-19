@@ -1,0 +1,12 @@
+Prototype image credits
+
+Both images were downloaded from Unsplash for phase-one visual prototyping.
+Unsplash license: https://unsplash.com/license
+
+Hero image source:
+https://images.unsplash.com/photo-1534146789009-76ed5060ec70
+
+Riding image source:
+https://images.unsplash.com/photo-1575548393466-0df1618ba410
+
+Replace these licensed placeholders with Dylan's approved personal media before final implementation.

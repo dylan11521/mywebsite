@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#161713">
+    <title>Industrial Trail-Tech — Dylan Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/prototype-base.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../assets/prototype.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="mobile-bar">
+      <a class="mobile-brand" href="#home" aria-label="Dylan prototype home">D//05</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </header>
+    <aside class="desktop-rail" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Dylan prototype home"><span>D</span></a>
+      <nav>
+        <a class="is-active" href="#home" data-nav aria-current="location"><span class="nav-index">01</span><span>BASE</span></a>
+        <a href="#riding" data-nav><span class="nav-index">02</span><span>RIDE</span></a>
+      </nav>
+      <a class="compare-link" href="../index.html" aria-label="Compare all six prototypes">IDX</a>
+    </aside>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Mobile navigation">
+        <a class="is-active" href="#home" data-nav><span>01</span>BASE / HOME</a>
+        <a href="#riding" data-nav><span>02</span>RIDE / MOUNTAIN</a>
+      </nav>
+      <a class="mobile-compare" href="../index.html">OPEN DIRECTION INDEX ↗</a>
+    </div>
+
+    <main id="main-content">
+      <section class="hero" id="home" data-section aria-labelledby="hero-title">
+        <img class="hero-photo" src="../assets/mountain-bike-hero-1200.webp" srcset="../assets/mountain-bike-hero-720.webp 720w, ../assets/mountain-bike-hero-1200.webp 1200w, ../assets/mountain-bike-hero-1800.webp 1800w" sizes="100vw" fetchpriority="high" alt="A mountain biker riding along a high ridge with a mountain beyond">
+        <div class="hero-shade"></div>
+        <div class="hero-decoration" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="prototype-label">SYS_05 / Industrial Trail-Tech</p>
+          <h1 id="hero-title"><span class="hero-title-line">Find the</span><span class="hero-title-line accent-line">next line.</span></h1>
+          <p class="hero-intro">I’m Dylan. I’m into basketball, games, and life on two wheels.</p>
+          <a class="hero-scroll" href="#riding">ENGAGE TRAIL <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="ride-section" id="riding" data-section aria-labelledby="riding-title">
+        <div class="section-heading">
+          <p>MODULE_02 / RIDE SYSTEM</p>
+          <h2 id="riding-title">Mountain<br>Biking</h2>
+          <span class="section-number" aria-hidden="true">TR//02</span>
+        </div>
+        <div class="media-frame">
+          <img src="../assets/mountain-bike-detail-1200.webp" srcset="../assets/mountain-bike-detail-720.webp 720w, ../assets/mountain-bike-detail-1200.webp 1200w, ../assets/mountain-bike-detail-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 85vw" loading="lazy" alt="A mountain biker riding through a sunlit forest">
+          <div class="media-overlay">
+            <span class="media-kicker">OPTICAL FEED / PROTOTYPE</span>
+            <button class="media-toggle" type="button" aria-pressed="false"><span>Play preview motion</span></button>
+          </div>
+          <div class="media-meta"><span>LOCAL MEDIA SOURCE</span><span>ASSET STATUS: PENDING</span></div>
+        </div>
+        <div class="ride-copy">
+          <p>My bike is a <strong>Santa Cruz Hightower</strong>. I like how every ride can be fast, technical, or completely different from the last.</p>
+          <a href="https://www.santacruzbicycles.com/en-ca/collections/hightower" target="_blank" rel="noopener noreferrer">HIGHTOWER / MANUFACTURER PAGE <span>(opens in a new tab)</span> ↗</a>
+        </div>
+        <div class="ride-grid">
+          <article class="ride-card">
+            <button type="button" aria-expanded="false" aria-controls="ride-trick"><span>RIDE_01</span><strong>Trick Riding</strong><i aria-hidden="true">+</i></button>
+            <div class="ride-detail" id="ride-trick" hidden><p>I like practicing control and finding a smooth line before trying anything bigger.</p></div>
+          </article>
+          <article class="ride-card">
+            <button type="button" aria-expanded="false" aria-controls="ride-trail"><span>RIDE_02</span><strong>Trail Riding</strong><i aria-hidden="true">+</i></button>
+            <div class="ride-detail" id="ride-trail" hidden><p>Trail rides are my favorite mix of speed, focus, and exploring.</p></div>
+          </article>
+          <article class="ride-card">
+            <button type="button" aria-expanded="false" aria-controls="ride-city"><span>RIDE_03</span><strong>City Riding</strong><i aria-hidden="true">+</i></button>
+            <div class="ride-detail" id="ride-city" hidden><p>Around town, I look for creative lines and keep the ride flowing.</p></div>
+          </article>
+        </div>
+      </section>
+      <footer class="prototype-footer"><span>DYLAN / PROTOTYPE_BUILD_01</span><a href="#home">RETURN TO BASE ↑</a></footer>
+    </main>
+  </body>
+</html>

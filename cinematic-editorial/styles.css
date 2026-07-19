@@ -1,0 +1,566 @@
+:root {
+  color-scheme: dark;
+  --bg: #080808;
+  --text: #f0ece4;
+  --muted: #9c9890;
+  --accent: #c82935;
+  --accent-ink: #fff;
+  --focus: #e85d67;
+  --rail-width: 92px;
+  --body-font: "Libre Franklin", sans-serif;
+  --display-font: "Italiana", serif;
+}
+
+body {
+  background: #080808;
+}
+
+body::after {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  opacity: 0.045;
+  pointer-events: none;
+  content: "";
+}
+
+.desktop-rail {
+  border-right: 1px solid rgba(240, 236, 228, 0.18);
+  background: rgba(8, 8, 8, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.desktop-rail .brand {
+  border-bottom: 1px solid rgba(240, 236, 228, 0.18);
+  font: 400 1.45rem/1 var(--display-font);
+}
+
+.desktop-rail nav a {
+  position: relative;
+  flex-direction: column;
+  gap: 7px;
+  color: #77736d;
+  font-size: 0.59rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 350ms ease;
+}
+
+.desktop-rail nav a::after {
+  position: absolute;
+  right: -17px;
+  width: 1px;
+  height: 0;
+  background: var(--accent);
+  content: "";
+  transition: height 350ms ease;
+}
+
+.desktop-rail nav a.is-active {
+  color: var(--text);
+}
+
+.desktop-rail nav a.is-active::after {
+  height: 34px;
+}
+
+.nav-index {
+  color: var(--accent);
+  font-family: var(--display-font);
+  font-size: 0.8rem;
+}
+
+.compare-link {
+  color: #aaa59d;
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero {
+  align-items: center;
+  padding: 8vh 7vw;
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  height: clamp(15px, 3.5vh, 42px);
+  background: #050505;
+  content: "";
+}
+
+.hero::before {
+  top: 0;
+}
+
+.hero::after {
+  bottom: 0;
+}
+
+.hero-photo {
+  filter: grayscale(0.62) contrast(1.18) brightness(0.66) sepia(0.08);
+  animation: cinema-image 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.76), transparent 60%),
+    linear-gradient(0deg, rgba(5, 5, 5, 0.62), transparent 56%);
+}
+
+.hero-decoration {
+  inset: clamp(15px, 3.5vh, 42px) 0;
+  height: auto;
+  border-top: 1px solid rgba(240, 236, 228, 0.15);
+  border-bottom: 1px solid rgba(240, 236, 228, 0.15);
+}
+
+.hero-decoration::before {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  color: rgba(240, 236, 228, 0.68);
+  content: "06  /  A FILM STUDY";
+  font: 400 0.55rem/1 var(--body-font);
+  letter-spacing: 0.18em;
+}
+
+.hero-content {
+  padding-top: 2vh;
+  animation: cinema-copy 1.2s 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.prototype-label {
+  margin-bottom: 42px;
+  color: #d2cdc4;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.prototype-label::before {
+  display: inline-block;
+  width: 48px;
+  height: 1px;
+  margin: 0 15px 3px 0;
+  background: var(--accent);
+  content: "";
+}
+
+.hero h1 {
+  max-width: 1100px;
+  margin: 0;
+  font: 400 clamp(5rem, 12vw, 12rem)/0.7 var(--display-font);
+  letter-spacing: -0.065em;
+}
+
+.hero .accent-line {
+  margin-left: 0.45em;
+  color: #ddd8cf;
+  font-style: italic;
+}
+
+.hero-intro {
+  max-width: 420px;
+  margin: 46px 0 32px auto;
+  color: #c8c3bb;
+  font-size: clamp(0.88rem, 1.2vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.hero-scroll {
+  float: right;
+  clear: both;
+  color: #e0dcd4;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-scroll span {
+  color: var(--accent);
+}
+
+.ride-section {
+  padding: clamp(120px, 14vw, 220px) 0 0;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  margin: 0 clamp(30px, 9vw, 140px) 75px;
+}
+
+.section-heading p {
+  grid-column: 1 / -1;
+  margin-bottom: 35px;
+  color: var(--accent);
+  font-size: 0.6rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+  font: 400 clamp(4.8rem, 10vw, 10.5rem)/0.73 var(--display-font);
+  letter-spacing: -0.055em;
+}
+
+.section-heading h2 em {
+  margin-left: 0.55em;
+  color: #d8d3ca;
+  font-weight: 400;
+}
+
+.section-number {
+  color: #4f4c47;
+  font: 400 clamp(5rem, 12vw, 12rem)/0.7 var(--display-font);
+}
+
+.media-frame {
+  aspect-ratio: 16 / 8.2;
+  background: #050505;
+}
+
+.media-frame::before,
+.media-frame::after {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  height: 6%;
+  background: #050505;
+  pointer-events: none;
+  content: "";
+}
+
+.media-frame::before {
+  top: 0;
+}
+
+.media-frame::after {
+  bottom: 0;
+}
+
+.media-frame > img {
+  filter: grayscale(0.52) contrast(1.2) brightness(0.75) sepia(0.1);
+}
+
+.media-overlay {
+  z-index: 4;
+  padding: 7% clamp(20px, 4vw, 60px);
+}
+
+.media-kicker {
+  color: #e2ddd4;
+  font: 400 0.57rem/1 var(--body-font);
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.media-toggle {
+  padding: 0;
+  background: transparent;
+  color: #e2ddd4;
+  font-size: 0.57rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.media-toggle::before {
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.media-meta {
+  z-index: 4;
+  bottom: 6%;
+  padding: 18px clamp(20px, 4vw, 60px);
+  color: #c4beb5;
+  font-size: 0.54rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.ride-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 11vw;
+  padding: 100px clamp(30px, 9vw, 140px) 140px;
+}
+
+.ride-copy p {
+  max-width: 850px;
+  margin: 0;
+  color: #d2cdc4;
+  font: 400 clamp(1.6rem, 3vw, 2.6rem)/1.4 var(--display-font);
+}
+
+.ride-copy strong {
+  color: #f1ede5;
+  font-weight: 400;
+}
+
+.ride-copy a {
+  align-self: end;
+  color: #d1ccc3;
+  font-size: 0.62rem;
+  line-height: 1.8;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.ride-copy a span {
+  display: block;
+  color: #74716b;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.ride-grid {
+  margin: 0 clamp(30px, 9vw, 140px);
+  border-top: 1px solid #343230;
+  border-bottom: 1px solid #343230;
+}
+
+.ride-card {
+  border-right: 1px solid #343230;
+}
+
+.ride-card:last-child {
+  border-right: 0;
+}
+
+.ride-card button {
+  position: relative;
+  min-height: 235px;
+  padding: 30px;
+  background: transparent;
+  color: #c5c0b7;
+}
+
+.ride-card button::after {
+  position: absolute;
+  inset: auto 30px 0;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 300ms ease, transform 400ms ease;
+}
+
+.ride-card button:hover::after,
+.ride-card button[aria-expanded="true"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.ride-card button > span {
+  margin-bottom: 82px;
+  color: var(--accent);
+  font: 400 0.8rem/1 var(--display-font);
+}
+
+.ride-card strong {
+  font: 400 clamp(1.55rem, 2.4vw, 2.2rem)/1.1 var(--display-font);
+}
+
+.ride-card i {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #77736d;
+  font-style: normal;
+  font-weight: 300;
+  transition: color 250ms ease, transform 250ms ease;
+}
+
+.ride-card button[aria-expanded="true"] i {
+  color: var(--accent);
+  transform: rotate(45deg);
+}
+
+.ride-detail {
+  min-height: 145px;
+  border-top: 1px solid #343230;
+  padding: 28px 30px;
+  color: #918d85;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.prototype-footer {
+  margin-top: 140px;
+  border-top: 1px solid #292827;
+  padding: 32px clamp(30px, 9vw, 140px);
+  color: #706d68;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.prototype-footer a {
+  color: #c7c2b9;
+}
+
+.mobile-bar {
+  border-bottom: 1px solid rgba(240, 236, 228, 0.16);
+  background: rgba(8, 8, 8, 0.88);
+  font: 400 1.3rem/1 var(--display-font);
+  backdrop-filter: blur(12px);
+}
+
+.mobile-menu {
+  background: #080808;
+}
+
+.mobile-menu nav a {
+  border-bottom: 1px solid #302e2c;
+  padding: 22px 0;
+  color: #77736d;
+  font: 400 clamp(3rem, 15vw, 5.6rem)/0.95 var(--display-font);
+}
+
+.mobile-menu nav a.is-active {
+  color: var(--text);
+}
+
+.mobile-menu nav span {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.mobile-compare {
+  color: #aaa59d;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@keyframes cinema-copy {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cinema-image {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    align-items: end;
+    padding: 100px 22px 70px;
+  }
+
+  .hero-decoration::before {
+    top: 4%;
+    font-size: 0.48rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.3rem, 21vw, 7rem);
+  }
+
+  .hero .accent-line {
+    margin-left: 0.12em;
+  }
+
+  .hero-intro {
+    max-width: 330px;
+    margin: 35px 0 28px;
+  }
+
+  .hero-scroll {
+    float: none;
+  }
+
+  .ride-section {
+    padding-top: 110px;
+  }
+
+  .section-heading {
+    margin: 0 20px 45px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(3.8rem, 18vw, 6rem);
+  }
+
+  .section-heading h2 em {
+    margin-left: 0.18em;
+  }
+
+  .section-number {
+    font-size: 4.5rem;
+  }
+
+  .media-frame {
+    aspect-ratio: 3 / 4;
+  }
+
+  .media-kicker {
+    display: none;
+  }
+
+  .media-meta {
+    font-size: 0.46rem;
+  }
+
+  .ride-copy {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 65px 20px 85px;
+  }
+
+  .ride-grid {
+    margin: 0 20px;
+  }
+
+  .ride-card {
+    border-right: 0;
+    border-bottom: 1px solid #343230;
+  }
+
+  .ride-card:last-child {
+    border-bottom: 0;
+  }
+
+  .ride-card button {
+    min-height: 155px;
+  }
+
+  .ride-card button > span {
+    margin-bottom: 45px;
+  }
+
+  .prototype-footer {
+    margin-top: 90px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

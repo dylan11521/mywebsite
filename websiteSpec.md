@@ -242,3 +242,9 @@ Use Google Fonts during prototyping and for the selected final direction.
 - The site uses no analytics or tracking and discourages search indexing.
 - The layout works in supported modern browsers from 360px through large desktop sizes.
 - Final media and content are supplied and approved before launch.
+
+## Decisions after prototyping Phase 1
+
+ - I like sport tech generally, but the fonts from matte-neon are preferred
+ - Some fonts, like in the nav are too small, they need to be increased a bit.
+ - The cards in sport tech are great.  Instead of a click to open, can you please have them just open always.
